@@ -1,0 +1,641 @@
+body {
+  margin: 0;
+  padding: 0;
+  background:#fcf8f3;  
+  color:#4b352d;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.title h1 {
+  margin:0;
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  text-align:center
+}
+.title p {
+  text-align:center;
+  margin:4px 0 0;
+  color:#666
+}
+  
+
+header,
+.intro,
+.calendar-section,
+.hero,
+.place,
+.countdown,
+.final,
+section {
+  background: #fcf8f3; /* белый фон для блоков */
+  margin: 0;
+  padding: 0; /* если нужно, можно оставить padding для контента */
+}
+
+* {
+  border: none;
+  box-shadow: none;
+}
+
+/* Если блоки имеют отступы с цветом, можно их убрать */
+section {
+  background: transparent; /* прозрачный фон */
+  margin: 0;
+  padding: 0; /* если нужно, можно оставить padding для контента */
+}
+
+div, section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero */
+.hero {
+  margin-top:26px;
+  display:flex;
+  flex-direction:column;
+  gap:26px}
+.hero-left {
+  padding:22px;
+  background:#fcf8f3;
+  border-radius:14px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.05);
+  text-align:center
+}
+.date-big {
+  font-family:'Playfair Display',serif;
+  font-size:46px;
+  color:#3b251e 
+}
+
+.start-block .label {
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:1px;
+  color:#222}
+.start-block .line{
+    width:2px;
+    height:60px;
+    background:#3b251e;
+    margin:15px auto;   
+}
+.start-block .time {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap; /* запрещает перенос строки */
+}
+.start-block .time1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  margin-top:12px;
+  line-height:1.4;
+  color: #333;
+  text-align: center;
+  white-space: nowrap; /* запрещает перенос строки */
+  margin-left: 20px;
+
+}
+
+/* Calendar */
+.calendar {
+  background:#fff;
+  border-radius:12px;
+  padding:14px;
+  border:1px solid #f0e2e7;
+  margin: 20px auto;      /* центр */
+  width: 320px;          /* фиксированная ширина */
+  max-width: 90vw;       /* чтобы не ломалось на телефоне */
+}
+
+.cal-head h3 {
+  margin:0;
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  text-align:center;
+  color:#3b251e
+}
+.grid {
+  margin-top:10px;
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:6px}
+.dow {
+  font-size:11px;
+  color:#777;
+  text-align:center;
+  font-weight:600
+}
+.day {
+  text-align:center;
+  padding:10px 0;
+  border-radius:8px;
+  color:#444;
+  font-size:14px;
+  background:#fafafa
+}
+.day.heart {
+  background:#f0e2e7;
+  position:relative;
+  font-weight:700;
+  color:#3b251e
+}
+.day.heart::after {
+  content:"❤";
+  position:absolute;
+  top:-6px;right:-6px;
+  color:#9959708a;
+  font-size:14px
+}
+.empty {
+  background:transparent
+}
+
+/* Place */
+.place {
+  text-align:center;
+  margin-top:40px
+}
+.place h2 {
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  margin-bottom:10px;
+  color:#3b251e
+  
+}
+
+.address {
+  color: #3b251e;
+  margin-bottom: 20px;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+.map-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: transparent;
+  color: #3b251e;
+  border: 2px dashed #3b251e;  /* пунктир */
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.map-btn:hover {
+  background: rgba(126, 17, 31, 0.08);
+}
+
+
+/* Countdown */
+.countdown {
+  text-align:center;
+  margin-top:50px
+}
+.countdown h2 {
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  margin-bottom:10px;
+  color:#3b251e
+}
+
+
+
+.title-wrap h1 {
+  position: relative;
+  top: -340px;   /* поднимает текст вверх */
+  
+
+}
+
+.name-left {
+    align-self: flex-start;
+    margin-left: -200px; /* чем больше, тем правее */
+}
+
+.amp {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.name-right {
+    align-self: flex-end;
+    margin-right: -150px; /* чем больше, тем левее */
+}
+
+h2 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.place {
+  background: #fcf8f3;
+  color: #3b251e;
+  position: relative;
+}
+
+.place::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  
+  border: 6px solid #fff;
+  border-radius: 12px;
+}
+
+
+* {
+  border-radius: 0 !important;
+}
+
+.intro-text {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto;      /* центр блока */
+  text-align: center; /* центр текста */
+}
+
+.intro h2 {
+  font-family:'Playfair Display',serif;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #3b251e;
+  margin: 0;
+}
+
+
+.hero {
+  padding: 40px;
+  background: #fdf6f0;
+  font-family: 'Arial', sans-serif;
+}
+
+
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.time-circle {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #3b251e;  /* бордовый контур */
+  border-radius: 70%;          /* круг */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #3b251e;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+
+
+/* Фото */
+
+.intro-photo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #fcf8f3;
+}
+
+.intro-photo img{
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Текст поверх фото */
+
+.video-overlay{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-47%);
+    width: 35%;
+    text-align: center;
+    z-index: 2;
+}
+
+.names-img{
+    width: 55%;          /* было 80% */
+    max-width: 650px;    /* было 950px */
+    height: auto;
+
+    margin-top: 15px;
+
+    opacity: .97;
+
+    filter:
+        drop-shadow(0 3px 8px rgba(0,0,0,.25))
+        drop-shadow(0 0 12px rgba(255,255,255,.15));
+}
+
+.amp{
+    font-size: 42px;
+    margin: 5px 0;
+}
+
+
+/* Анимация появления при скролле */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.details-block {
+  position: relative;
+  padding: 80px 30px;
+  text-align: center;
+  color: #3b251e;
+  background: url("details-bg.jpg") center/cover no-repeat;
+}
+
+.details-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fcf8f3;
+  backdrop-filter: blur(2px);
+}
+
+.details-block * {
+  position: relative;
+  z-index: 1;
+}
+
+.details-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.details-heart {
+  font-size: 18px;
+  margin: 25px 0;
+}
+
+.details-text {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+
+
+.signature {
+  font-family: 'Playfair Display', serif;
+  margin-top: 30px;
+  font-size: 36px;                     /* крупно */
+  color: #3b251e;
+  letter-spacing: 1px;
+}
+
+.signature strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;                     /* ещё крупнее имена */
+  display: block;
+  margin-top: 5px;
+}
+
+.intro-photo{
+    background: var(#fcf8f3);
+}
+
+/* Блок дресс-кода */
+
+.dresscode-box{
+    max-width: 760px;
+    margin: 35px auto 0;
+    padding: 35px;
+
+    background: #EAD9CE;
+    
+    
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.dresscode-box .details-text{
+    margin-bottom: 30px;
+}
+
+.dress-img{
+    width:85%;
+    display:block;
+    margin:25px auto;
+}
+
+.dress-img:last-child{
+    margin-bottom:0;
+}
+
+/* ==========================================
+   Адаптация под телефоны
+========================================== */
+
+@media (max-width: 768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+     .video-overlay{
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+    }
+
+    .names-img{
+        width: 60%;
+        max-width: 420px;
+        height: auto;
+    }
+
+    /* Фото */
+    .intro-photo{
+        padding:20px 12px;
+    }
+
+    .intro-photo img{
+        width:100%;
+        max-width:420px;
+        margin:auto;
+    }
+
+    /* Имена */
+    .video-overlay{
+        top:25px;
+    }
+
+    .main-names{
+        font-size:40px;
+        letter-spacing:2px;
+        line-height:1.1;
+    }
+
+    .amp{
+        font-size:30px;
+        margin:4px 0;
+    }
+
+    /* Заголовки */
+
+    .title h1{
+        font-size:28px;
+    }
+
+    .title p{
+        font-size:16px;
+    }
+
+    h2{
+        font-size:28px;
+        letter-spacing:2px;
+    }
+
+    /* Текст */
+
+    .intro-text{
+        width:90%;
+    }
+
+    .intro p,
+    .details-text{
+        font-size:17px;
+        line-height:1.7;
+    }
+
+    /* Календарь */
+
+    .calendar{
+        width:95%;
+        padding:16px;
+    }
+
+    .day{
+        padding:8px 0;
+        font-size:14px;
+    }
+
+    /* Блок времени */
+
+    .hero{
+        padding:20px;
+    }
+
+    .date-big{
+        font-size:34px;
+    }
+    
+    /* Место */
+
+    .place{
+        padding:50px 20px;
+    }
+
+    .place h2{
+        font-size:30px;
+    }
+
+    .address{
+        font-size:16px;
+    }
+
+    .map-btn{
+        padding:12px 24px;
+        font-size:15px;
+    }
+
+    /* Таймер */
+
+    .timer{
+        gap:12px;
+    }
+
+    .time-circle{
+        width:70px;
+        height:70px;
+        font-size:15px;
+    }
+
+    /* Детали */
+
+    .details-block{
+        padding:60px 20px;
+    }
+
+    .details-title{
+        font-size:30px;
+    }
+
+    .dresscode-box{
+        width:92%;
+        padding:20px;
+    }
+
+    .dress-img{
+        width:100%;
+        max-width:330px;
+        margin:20px auto;
+    }
+
+    /* Подпись */
+
+    .signature{
+        font-size:28px;
+    }
+
+    .signature strong{
+        font-size:34px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        -webkit-text-size-adjust:100%;
+    }
+
+    img{
+        max-width:100%;
+        height:auto;
+    }
+
+}
